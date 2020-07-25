@@ -12,4 +12,4 @@ Resources:
           Type: Api
           Properties:
             Path: '/counter'
-            Method: get
+            Method: get2
