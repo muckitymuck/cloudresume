@@ -1,3 +1,8 @@
+async function fetchText() {
+    let response = await fetch('https://4lnixszdo4.execute-api.us-east-2.amazonaws.com/test/visitcount');
+    let data = await response.text();
+    console.log(data);
+}
 async function getCount() {
     let url = 'https://4lnixszdo4.execute-api.us-east-2.amazonaws.com/test/visitcount';
     try {
