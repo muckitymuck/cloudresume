@@ -16,8 +16,8 @@ async function renderCount() {
     let count = await getCount();
     let html = '';
     count.map(count => {
-        let htmlSegment = '<div class="Visits"></div>';
-        html +=htmlSegment;
+        let htmlSegment = '<div class="Visits"><p>ok+${console.log(data)}</p></div>';
+        html += htmlSegment;
     });
     let container = document.querySelector('.container');
     container.innerHTML = html;
