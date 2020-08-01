@@ -2,9 +2,9 @@ version = 0.1
 [default]
 [default.deploy]
 [default.deploy.parameters]
-stack_name = "resumecounter"
+stack_name = "hitcounter"
 s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1a1777orqs4b5"
-s3_prefix = "resumecounter"
+s3_prefix = "hitcounter"
 region = "us-east-2"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
