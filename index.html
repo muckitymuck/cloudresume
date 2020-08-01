@@ -76,7 +76,7 @@
       <button id="fetchUserDataBtn">Fetch User Data</button>
     </div>
     <hr>
-    <div id="response"></div>
+    <div id="out"><p>""</p></div>
     <!-- <div class="container"></div>
     <script src="js/app.js"></script> -->
     
@@ -84,10 +84,11 @@
       document.getElementById('fetchUserDataBtn').addEventListener('click', fetchUserData);
   
       function fetchUserData(){
-          fetch('https://4lnixszdo4.execute-api.us-east-2.amazonaws.com/test/visitcount')
+          fetch('https://4lnixszdo4.execute-api.us-east-2.amazonaws.com/prod/visitcount')
               .then(response => response.json())
-              .then(json => console.log(body))
-              document.getElementById("response").innerHTML = json;
+              .then(statusCode => alert(statusCode))
+              return(statusCode)
+      document.getElementById("out").innerText = JSON.stringify(fetchUserData.statusCode);
       }
     </script>
     <script>document.getElementById("demo").innerHTML = 5 + 6;</script>
