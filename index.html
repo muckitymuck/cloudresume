@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="AgoldsteinResume.css">
 <div id="header"></div>
 <div class="left"></div>
+<body>
 <div class="stuff">
   <br><br>
   <h1 class="sansserif">Andrew Goldstein</h1>
@@ -69,11 +70,27 @@
   <br>
   <div>
     <p style = "text-align: center;">
-    Visits: <span id="visits">13</span>
+    Visits: <span id="visits">13</span><p id="demo"></p>
     </p>
-    <p id="demo"></p>
-    <body>
-      <div class="container"></div>
-      <script src="js/app.js">document.getElementById("demo").innerHTML = 5 + 6;</script>
-    </body>
-</div>
+    <div>
+      <button id="fetchUserDataBtn">Fetch User Data</button>
+    </div>
+    <hr>
+    <div id="response"></div>
+    <!-- <div class="container"></div>
+    <script src="js/app.js"></script> -->
+    
+    <script>
+      document.getElementById('fetchUserDataBtn').addEventListener('click', fetchUserData);
+  
+      function fetchUserData(){
+          fetch('https://4lnixszdo4.execute-api.us-east-2.amazonaws.com/test/visitcount')
+              .then(response => response.json())
+              .then(json => console.log(body))
+              document.getElementById("response").innerHTML = json;
+      }
+    </script>
+    <script>document.getElementById("demo").innerHTML = 5 + 6;</script>
+
+  </div>
+</body>
