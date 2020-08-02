@@ -5,13 +5,21 @@
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
 
+<<<<<<< HEAD
 </body>   
+=======
+<p id="outNum"></p>
+
+</body>
+>>>>>>> 350d0be265596e59fb282868991d6046e47beb82
 <script>
     fetch('https://4lnixszdo4.execute-api.us-east-2.amazonaws.com/test/visitcount')
         .then(response => response.json())
         .then(data => {
         console.log(data) // Prints result from `response.json()` in getRequest
+        document.getElementById("outNum").innerHTML = data;
         })
-        .catch(error => console.error(error))
+.catch(error => console.error(error))
+
 </script>
 </html>
