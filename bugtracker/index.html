@@ -694,9 +694,12 @@
         <script>
             fetch('https://o6xol319xj.execute-api.us-east-1.amazonaws.com/default/bugtracker')
                 .then(response => response.json())
-                .then(json => console.log(json))
-                .then(document.getElementById("dataTable").innerHTML = json;)
-                .catch(error => console.error(error));                
+                .then(json => {
+                console.log(json)
+                document.getElementById("dataTable").innerHTML = json;
+                })
+                .catch(error => console.error(error));
+
                 //old
                 //.then(data => {
                 //console.log(data) // Prints result from `response.json()` in getRequest
