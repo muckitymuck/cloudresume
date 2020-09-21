@@ -692,14 +692,13 @@
         <!-- New Scripts below here-->
         <script>
             fetch(https://o6xol319xj.execute-api.us-east-1.amazonaws.com/default/bugtracker)
-            .then(response => response.json())
-            .then(data => {
-            console.log(data) // Prints result from `response.json()` in getRequest
-            document.getElementById("dataTable").innerHTML = data;
-            })
-            .catch(error => console.error(error))
-            
-                
+                .then(response => response.json())
+                .then(data => {
+                console.log(data) // Prints result from `response.json()` in getRequest
+                document.getElementById("dataTable").innerHTML = data;
+                })
+                .catch(error => console.error(error))
+                     
         </script>
             }
     </body>
