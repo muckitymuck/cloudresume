@@ -180,6 +180,8 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        
+                                        <!--
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
@@ -657,7 +659,7 @@
                                                 <td>2011/01/25</td>
                                                 <td>$112,000</td>
                                             </tr>
-                                        </tbody>
+                                        </tbody>-->
                                     </table>
                                 </div>
                             </div>
@@ -687,5 +689,18 @@
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/datatables-demo.js"></script>
+        <!-- New Scripts below here-->
+        <script>
+            fetch(https://o6xol319xj.execute-api.us-east-1.amazonaws.com/default/bugtracker)
+            .then(response => response.json())
+            .then(data => {
+            console.log(data) // Prints result from `response.json()` in getRequest
+            document.getElementById("dataTable").innerHTML = data;
+            })
+            .catch(error => console.error(error))
+            
+                
+        </script>
+            }
     </body>
 </html>
