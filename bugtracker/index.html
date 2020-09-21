@@ -691,7 +691,7 @@
         <script src="assets/demo/datatables-demo.js"></script>
         <!-- New Scripts below here-->
         <script>
-            fetch(https://o6xol319xj.execute-api.us-east-1.amazonaws.com/default/bugtracker)
+            fetch('https://o6xol319xj.execute-api.us-east-1.amazonaws.com/default/bugtracker')
                 .then(response => response.json())
                 .then(data => {
                 console.log(data) // Prints result from `response.json()` in getRequest
@@ -700,6 +700,5 @@
                 .catch(error => console.error(error))
                      
         </script>
-            }
     </body>
 </html>
